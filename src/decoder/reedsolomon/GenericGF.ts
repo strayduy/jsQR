@@ -33,8 +33,8 @@ export default class GenericGF {
     for (let i = 0; i < this.size - 1; i++) {
       this.logTable[this.expTable[i]] = i;
     }
-    this.zero = new GenericGFPoly(this, Uint8ClampedArray.from([0]));
-    this.one = new GenericGFPoly(this, Uint8ClampedArray.from([1]));
+    this.zero = new GenericGFPoly(this, new Uint8ClampedArray([0]));
+    this.one = new GenericGFPoly(this, new Uint8ClampedArray([1]));
   }
 
   public multiply(a: number, b: number) {
